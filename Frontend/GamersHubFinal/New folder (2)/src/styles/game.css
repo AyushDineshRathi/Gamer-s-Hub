@@ -1,0 +1,235 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: rgb(24, 23, 23);
+    flex-direction: column;
+    display: flex;
+    gap: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search input {
+    padding: 13px 60px;
+    border-radius: 20px;
+    width: 350px;
+    font-size: 18px;
+    margin-right: 20px;
+    outline: none;
+    background: transparent;
+    border: 1px solid gray;
+    color: white;
+    transition: all 0.3s;
+}
+
+.search{
+    position: relative;
+}
+
+.search img{
+    position: absolute;
+    height: 25px;
+    left: 5%;
+    top: 25%;
+}
+
+.search input:focus{
+    border: 1px solid rgb(0, 132, 255);
+    box-shadow: 1px 1px 10px rgb(0, 132, 255);
+}
+
+.left {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.logo img {
+    height: 120px;
+    width: 200px;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.profile-section {
+    text-align: center;
+}
+
+.profile-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10vw;
+    padding: 10px 20px;
+    background-color: #ff4757; /* Red color */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    text-decoration: none;
+    outline: none;
+}
+
+.profile-button:hover {
+    background-color: #18e842; /* Darker red for hover effect */
+}
+
+.profile-button:active {
+    transform: scale(0.98); /* Slightly scales down button when clicked */
+}
+
+.profile-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 8px; /* Space between icon and text */
+}
+
+.button-text {
+    font-size: 16px;
+}
+
+.title {
+    width: 30rem;
+    height: 5vh;
+    color: #18e842;
+}
+
+.wishlist {
+    display: inline-block;
+    position: relative;
+}
+
+#wishlist-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    outline: none;
+    position: relative;
+}
+
+.heart-container {
+    position: relative;
+    display: inline-block;
+}
+
+#heart-icon {
+    width: 28px; /* Adjust size as needed */
+    transition: filter 0.3s ease;
+}
+
+#wishlist-button.active #heart-icon {
+    filter: invert(46%) sepia(89%) saturate(7491%) hue-rotate(356deg) brightness(105%) contrast(101%);
+}
+
+/* Small heart styles */
+.small-heart {
+    position: absolute;
+    width: 16px; /* Adjust size as needed */
+    height: 16px;
+    background: url('./icons/heart.png') no-repeat center center;
+    background-size: contain;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+#small-heart1 {
+    top: -30px;
+    left: 10px;
+}
+
+#small-heart2 {
+    top: -20px;
+    left: -20px;
+}
+
+#small-heart3 {
+    top: -30px;
+    left: 30px;
+}
+
+#wishlist-button.animate .small-heart {
+    opacity: 1;
+    transform: translateY(-50px);
+}
+
+@keyframes fadeAway {
+    to {
+        opacity: 0;
+    }
+}
+
+.upper {
+    display: flex;
+    height: 8vh;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.details {
+    display: flex;
+    height: 78vh;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.pic img {
+    width: 60vw;
+    height: 70vh;
+    border-radius: 20px;
+    /* border: 2px solid green; */
+}
+
+.wholepic {
+    flex-direction: column;
+    display: flex;
+    width: 60vw;
+}
+
+.info {
+    /* border: 2px solid green; */
+    height: 70vh;
+    margin-top: 40px;
+    width: 25vw;
+    flex-direction: column;
+    display: flex;
+    justify-content: space-evenly;
+    padding-left: 15px;
+    color: white;
+    text-shadow: 1px 1px 10px white;
+}
+
+.end {
+    width: 90vw;
+    /* margin: 25px; */
+}
+
+.description {
+    height: 25vh;
+    border: 2px solid white;
+    margin: 25px;
+}
+
+.reviews {
+    height: 50vh;
+    border: 2px solid white;
+    margin: 25px;
+}
+
+.similar {
+    height: 50vh;
+    border: 2px solid white;
+    margin: 25px;
+}

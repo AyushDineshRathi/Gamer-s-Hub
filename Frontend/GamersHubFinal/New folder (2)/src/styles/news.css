@@ -1,0 +1,55 @@
+.cards{
+    border-radius: 15px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    gap: 20px;
+}
+
+.infos{
+    display: flex;
+    height: 200px;
+    width: 95vw;
+    margin-top: 15px;
+    text-align: left;
+}
+
+.infos img{
+    height: 200px;
+    width: 250px;
+    margin-left: 40px;
+    box-shadow: 1px 1px 10px white;
+}
+
+p.des{
+    padding: 0;
+    margin-top: 5px;
+    color: #aaaaaa;
+}
+
+.info-container{
+    margin-left: 20px;
+    width: 80vw;
+}
+
+.card{
+    border: none;
+}
+
+p.author{
+    float: right;
+    margin-top: 70px;
+}
+
+.info-container a{
+    margin-left: 20px;
+    margin-top: 20px;
+    color: aquamarine;
+    transition: all 0.2s;
+}
+
+.info-container a:hover{
+    text-shadow: 1px 1px 10px aquamarine;
+    transform: translateY(-3px);
+}
